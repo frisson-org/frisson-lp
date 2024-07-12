@@ -1,0 +1,22 @@
+.f-hover {
+	transition: opacity $transition-duration;
+
+	@include mouseover {
+		opacity: 0.7;
+	}
+}
+
+.f-desktop {
+
+	@include md-down {
+		display: none;
+	}
+}
+
+.f-mobile {
+	display: none;
+
+	@include md-down {
+		display: block;
+	}
+}

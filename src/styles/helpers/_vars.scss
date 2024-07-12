@@ -1,0 +1,34 @@
+@use 'sass:math';
+
+@import 'media-queries';
+
+// Fonts
+$font-family-primary: 'MPLUS1p', sans-serif;
+
+// Colors
+$white: #FFF;
+$black: #000;
+$text: #212731;
+$text-secondary: #4F647E;
+$text-light: #5F819D;
+$text-gray: #96A4AE;
+$blue: #0E2F56;
+$accent: #20467B;
+$orange: #FC3B2D;
+$border: #D4DBE4;
+$hover: #F2F7FD;
+$border: #F8F8FA;
+$copyright: #D4DBE4;
+
+$desktop-width: 1440px; // Which is in design
+$calc-font-size: 15px;
+$base-font-size:  inVw($calc-font-size, $desktop-width);
+$base-font-size-lg: inVw($calc-font-size, $responsive-lg);
+
+$base-outer-padding-desktop: inEm(64px);
+$base-outer-padding-mobile: inEm(16px);
+$base-container-width: 1440px;
+
+$img-path: '../../images';
+
+$transition-duration: 0.3s;
