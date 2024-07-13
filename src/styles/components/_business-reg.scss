@@ -1,0 +1,12 @@
+.f-business-reg {
+	position: relative;
+	z-index: 1;
+	max-width: inEm(705px);
+	margin: inEm(140px) auto 0;
+	text-align: center;
+
+	&__description-container,
+	&__button-container {
+		margin-top: inEm(24px);
+	}
+}

@@ -1,0 +1,37 @@
+.f-footer {
+	background: $text;
+	color: $white;
+	padding-block: inEm(30px);
+
+	&__nav {
+		column-gap: inEm(40px);
+	}
+
+	&__nav-link {
+		position: relative;
+		font-size: inEm(16px);
+		line-height: inEm(20px, 16px);
+		padding-block: inEm(3px, 16px);
+		font-weight: 500;
+
+		&_active {
+			pointer-events: none;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 1px;
+				background-color: $white;
+			}
+		}
+	}
+
+	&__copyright {
+		font-size: max(13px, inEm(13px));
+		line-height: inEm(16px, 13px);
+		color: $copyright;
+	}
+}

@@ -1,0 +1,14 @@
+.f-business-title {
+	text-align: center;
+	max-width: inEm(580px);
+	margin: inEm(100px) auto 0;
+
+	&__description-container {
+		margin-top: inEm(24px);
+	}
+
+	&__buttons-container {
+		margin-top: inEm(24px);
+		column-gap: inEm(16px);
+	}
+}

@@ -1,0 +1,7 @@
+.f-nav-link {
+	transition: color $transition-duration;
+
+	@include mouseover {
+		color: $link-hover;
+	}
+}

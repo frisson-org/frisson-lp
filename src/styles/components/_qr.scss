@@ -1,0 +1,36 @@
+.f-qr {
+
+	&_header {
+
+		@include md-down {
+			display: none;
+		}
+	}
+
+	&__items {
+		column-gap: inEm(40px);
+
+		@include sm-down {
+			column-gap: inEm(16px);
+		}
+	}
+
+	&__item {
+		width: inEm(152px);
+	}
+
+	&__code-container {
+		width: 100%;
+		aspect-ratio: 1/1;
+		margin-bottom: inEm(10px);
+
+		@include md-down {
+			display: none;
+		}
+	}
+
+	&__store-container {
+		width: 100%;
+		height: inEm(44px);
+	}
+}

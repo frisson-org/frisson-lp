@@ -1,0 +1,43 @@
+.f-header {
+	color: $accent;
+	padding-top: inEm(32px);
+
+	&__logo-container {
+		display: block;
+		width: inEm(118px);
+		height: inEm(24px);
+	}
+
+	&__side {
+
+		&_left {
+			column-gap: inEm(40px);
+		}
+	}
+
+	&__nav {
+		column-gap: inEm(40px);
+	}
+
+	&__nav-link {
+		position: relative;
+		font-size: inEm(16px);
+		line-height: inEm(20px, 16px);
+		padding-block: inEm(3px, 16px);
+		font-weight: 500;
+
+		&_active {
+			pointer-events: none;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 1px;
+				background-color: $accent;
+			}
+		}
+	}
+}

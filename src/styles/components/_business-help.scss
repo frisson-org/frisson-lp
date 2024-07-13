@@ -1,0 +1,36 @@
+.f-business-help {
+	margin-top: inEm(80px);
+	background: $white;
+	border-radius: inEm(40px);
+	padding: inEm(111px);
+	min-height: inEm(700px);
+
+	&__text-container {
+		position: relative;
+		z-index: 1;
+		color: $text;
+		max-width: inEm(420px);
+	}
+
+	&__description-container,
+	&__button-container {
+		margin-top: inEm(24px);
+	}
+
+	&__description-container {
+
+		& > * {
+
+			&:not(:last-child) {
+				margin-bottom: inEm(24px, 16px);
+			}
+		}
+	}
+
+	&__image-container {
+		width: inEm(1140px);
+		height: inEm(876px);
+		top: inEm(-88px);
+		right: inEm(-204px);
+	}
+}

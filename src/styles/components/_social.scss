@@ -1,0 +1,41 @@
+.f-social {
+	column-gap: inEm(20px);
+
+	&_business {
+		justify-content: center;
+		margin-top: inEm(146px);
+	}
+	&_business & {
+
+		&__item {
+			border-color: rgba($white, 0.3);
+		}
+	}
+
+	&_terms {
+		justify-content: center;
+		margin-top: inEm(104px);
+	}
+
+	&:not(&_business) {
+
+		svg {
+
+			path {
+				fill: $accent;
+			}
+		}
+	}
+
+	&__item {
+		width: inEm(44px);
+		height: inEm(44px);
+		border-radius: 50%;
+		border: 1px solid $accent;
+	}
+
+	svg {
+		width: inEm(24px);
+		height: inEm(24px);
+	}
+}

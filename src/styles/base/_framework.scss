@@ -110,7 +110,7 @@
 	font-weight: 900;
 }
 
-// Image wrappers for a proper media display
+// ImageBlock wrappers for a proper media display
 .img-wrap,
 .img-center,
 .img-cover,
@@ -149,7 +149,7 @@
 	justify-content: center;
 }
 
-// Image wrappers that should fit the image inside. Height must be specified additionally (px, aspect-ratio, etc.)
+// ImageBlock wrappers that should fit the image inside. Height must be specified additionally (px, aspect-ratio, etc.)
 .img-cover,
 .img-contain,
 .img-scale-down {

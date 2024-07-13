@@ -1,0 +1,51 @@
+.f-touch-block {
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba($black, 0.8);
+	padding: inEm(32px);
+
+	&__container {
+		background: $white;
+		color: $text;
+		max-width: inEm(770px);
+		margin-inline: auto;
+		border-radius: inEm(40px);
+		padding: inEm(40px) inEm(40px) inEm(56px);
+	}
+
+	&__close {
+		top: inEm(40px);
+		right: inEm(40px);
+
+		svg {
+			width: inEm(24px);
+			height: inEm(24px);
+		}
+	}
+
+	&__image-container {
+		width: inEm(300px);
+		height: inEm(220px);
+	}
+
+	&__text-container {
+		margin-top: inEm(32px);
+		max-width: inEm(633px);
+	}
+
+	&__description-container {
+		margin-top: inEm(24px, 16px);
+		max-width: inEm(453px, 16px);
+
+		& > * {
+
+			&:not(:last-child) {
+				margin-bottom: inEm(24px, 16px);
+			}
+		}
+	}
+}

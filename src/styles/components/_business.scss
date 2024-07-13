@@ -1,0 +1,32 @@
+.f-business {
+	position: relative;
+	padding-bottom: inEm(72px);
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: inEm(-58px);
+		height: inEm(800px);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	&::before {
+		left: 0;
+		width: inEm(379px);
+		height: inEm(846px);
+		background-image: url($img-path + '/dec-business-left.svg');
+	}
+
+	&::after {
+		right: 0;
+		width: inEm(745px);
+		background-image: url($img-path + '/dec-business-right.svg');
+	}
+
+	&__wrapper {
+		position: relative;
+		z-index: 1;
+	}
+}

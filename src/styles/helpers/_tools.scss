@@ -20,3 +20,15 @@
 		display: block;
 	}
 }
+
+.f-heading-1 {
+	font-size: inEm(40px);
+	line-height: inEm(44px, 40px);
+	letter-spacing: inEm(-0.42px, 40px);
+	font-weight: 700;
+}
+
+.f-paragraph {
+	font-size: inEm(16px);
+	line-height: inEm(24px, 16px);
+}

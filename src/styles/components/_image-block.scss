@@ -1,0 +1,43 @@
+.f-image-block {
+	position: relative;
+	z-index: 1;
+	margin-top: inEm(60px);
+
+	&_business {
+		position: relative;
+		margin: inEm(120px) #{-$base-outer-padding-desktop} 0;
+		width: auto;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&::before {
+			top: inEm(-150px);
+			left: 0;
+			width: inEm(639px);
+			height: inEm(877px);
+			background-image: url($img-path + '/dec-image-left.svg');
+		}
+
+		&::after {
+			top: inEm(-111px);
+			right: 0;
+			width: inEm(320px);
+			height: inEm(948px);
+			background-image: url($img-path + '/dec-image-right.svg');
+		}
+	}
+
+	&__image-container {
+		width: inEm(654px);
+	}
+
+	&__social-block {
+		margin-top: inEm(20px);
+	}
+}
