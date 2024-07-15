@@ -21,13 +21,19 @@ const Header = () => {
 	}
 
 	const menuOpenHandler = () => {
-		setMenuOpen( true );
-		document.body.style.position = 'fixed';
+
+		if ( ! isHover ) {
+			setMenuOpen( true );
+			document.body.style.position = 'fixed';
+		}
 	}
 
 	const menuCloseHandler = () => {
-		setMenuOpen( false );
-		document.body.style.position = '';
+
+		if ( ! isHover ) {
+			setMenuOpen( false );
+			document.body.style.position = '';
+		}
 	}
 
 	const navLinkClassNames = ( { isActive }, cl ) =>
@@ -57,24 +63,28 @@ const Header = () => {
 					<nav className="f-header__nav flex">
 						<NavLink
 							to="/"
+							onClick={ menuCloseHandler }
 							className={ navLinkClassNames }
 						>
 							Для пользователя
 						</NavLink>
 						<NavLink
 							to="/business"
+							onClick={ menuCloseHandler }
 							className={ navLinkClassNames }
 						>
 							Для бизнеса
 						</NavLink>
 						<NavLink
 							to="/private-policy"
+							onClick={ menuCloseHandler }
 							className={ ( params ) => navLinkClassNames( params, 'f-header__nav-link_mobile' ) }
 						>
 							Политика обработки данных
 						</NavLink>
 						<NavLink
 							to="/terms-of-use"
+							onClick={ menuCloseHandler }
 							className={ ( params ) => navLinkClassNames( params, 'f-header__nav-link_mobile' ) }
 						>
 							Пользовательское соглашение
@@ -82,7 +92,7 @@ const Header = () => {
 					</nav>
 
 					<div className="f-header__nav-container-mobile">
-						<QR/>
+						<QR menuClose={ menuCloseHandler }/>
 						<p className="f-footer__copyright">© Frisson, { getCurrentYear() }</p>
 					</div>
 				</div>

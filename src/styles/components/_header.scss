@@ -135,6 +135,10 @@
 	&__mobile-open {
 		width: inEm(24px);
 		height: inEm(24px);
+
+		svg {
+			pointer-events: none;
+		}
 	}
 
 	&__mobile-close {
@@ -142,6 +146,10 @@
 		height: inEm(24px);
 		top: inEm(24px);
 		right: inEm(16px);
+
+		svg {
+			pointer-events: none;
+		}
 	}
 
 	&__nav-container-mobile {

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 
-const QRItem = ( { qr, store, link } ) => {
+const QRItem = ( { qr, store, link, menuClose } ) => {
 
 	return (
-		<Link to={ link } className="f-qr__item">
+		<Link to={ link } onClick={ menuClose } className="f-qr__item">
 			<div className="f-qr__code-container img-contain">
 				<img src={ qr } alt="" className="f-qr__code"/>
 			</div>

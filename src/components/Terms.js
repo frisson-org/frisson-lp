@@ -1,7 +1,15 @@
 import parse from 'html-react-parser';
 import Social from './Social/Social';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Terms = ( { title, content } ) => {
+
+	const { pathname } = useLocation();
+
+	useEffect( () => {
+		window.scrollTo( 0, 0 );
+	}, [ pathname ] );
 
 	return (
 		<section className="f-terms f-outer">

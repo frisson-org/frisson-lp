@@ -3,10 +3,6 @@ import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
 
-	const clickHandler = () => {
-		window.scrollTo( 0, 0 );
-	}
-
 	const navLinkClassNames = ( { isActive } ) =>
 		[
 			'f-footer__nav-link',
@@ -24,14 +20,12 @@ const Footer = () => {
 					<nav className="f-footer__nav flex">
 						<NavLink
 							to="/private-policy"
-							onClick={ clickHandler }
 							className={ navLinkClassNames }
 						>
 							Политика обработки данных
 						</NavLink>
 						<NavLink
 							to="/terms-of-use"
-							onClick={ clickHandler }
 							className={ navLinkClassNames }
 						>
 							Пользовательское соглашение
