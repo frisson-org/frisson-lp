@@ -2,6 +2,16 @@
 	padding-top: inEm(100px);
 	padding-bottom: inEm(48px);
 
+	@include md-down {
+		padding-top: inEm(80px);
+		padding-bottom: inEm(88px);
+	}
+
+	@include sm-down {
+		padding-top: inEm(24px);
+		padding-bottom: inEm(48px);
+	}
+
 	&__title-block {
 
 		&::before,
@@ -12,6 +22,15 @@
 			background-size: contain;
 			top: inEm(-156px);
 			height: inEm(800px);
+
+			@include md-down {
+				top: inEm(-50px);
+			}
+
+			@include sm-down {
+				top: inEm(-72px);
+				height: inEm(442px);
+			}
 		}
 
 		&::before {
@@ -19,12 +38,26 @@
 			width: inEm(378px);
 			height: inEm(846px);
 			background-image: url($img-path + '/dec-customer-left.svg');
+
+			@include sm-down {
+				width: inEm(208px);
+				height: inEm(442px);
+			}
 		}
 
 		&::after {
 			right: 0;
 			width: inEm(745px);
 			background-image: url($img-path + '/dec-customer-right.svg');
+
+			@include md-down {
+				right: inEm(-33px);
+			}
+
+			@include sm-down {
+				width: inEm(442px);
+				right: inEm(-145px);
+			}
 		}
 	}
 
@@ -33,6 +66,16 @@
 		z-index: 1;
 		column-gap: inEm(20px);
 		transform: translateX(inEm(65px));
+
+		@include md-down {
+			justify-content: flex-start;
+			row-gap: inEm(40px);
+			transform: none;
+		}
+
+		@include sm-down {
+			row-gap: inEm(20px);
+		}
 	}
 
 	&__title-side {
@@ -48,11 +91,31 @@
 		margin-top: inEm(24px, 16px);
 		max-width: inEm(420px, 16px);
 
+		@include sm-down {
+			margin-top: inEm(20px, 15px);
+		}
+
 		& > * {
 
 			&:not(:last-child) {
 				margin-bottom: inEm(24px, 16px);
+
+				@include sm-down {
+					margin-bottom: inEm(20px, 15px);
+				}
 			}
+		}
+	}
+
+	&__social-block {
+		margin-top: inEm(40px);
+
+		@include md-down {
+			margin-top: inEm(60px);
+		}
+
+		@include sm-down {
+			margin-top: inEm(40px);
 		}
 	}
 }

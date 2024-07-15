@@ -8,6 +8,10 @@
 	background: rgba($black, 0.8);
 	padding: inEm(32px);
 
+	@include sm-down {
+		padding: inEm(16px);
+	}
+
 	&__container {
 		background: $white;
 		color: $text;
@@ -15,11 +19,20 @@
 		margin-inline: auto;
 		border-radius: inEm(40px);
 		padding: inEm(40px) inEm(40px) inEm(56px);
+
+		@include sm-down {
+			padding: inEm(16px) inEm(16px) inEm(32px);
+		}
 	}
 
 	&__close {
 		top: inEm(40px);
 		right: inEm(40px);
+
+		@include sm-down {
+			top: inEm(24px);
+			right: inEm(24px);
+		}
 
 		svg {
 			width: inEm(24px);
@@ -30,21 +43,38 @@
 	&__image-container {
 		width: inEm(300px);
 		height: inEm(220px);
+
+		@include sm-down {
+			width: inEm(142px);
+			height: inEm(104px);
+		}
 	}
 
 	&__text-container {
 		margin-top: inEm(32px);
 		max-width: inEm(633px);
+
+		@include sm-down {
+			margin-top: inEm(24px);
+		}
 	}
 
 	&__description-container {
 		margin-top: inEm(24px, 16px);
 		max-width: inEm(453px, 16px);
 
+		@include sm-down {
+			margin-top: inEm(24px, 15px);
+		}
+
 		& > * {
 
 			&:not(:last-child) {
 				margin-bottom: inEm(24px, 16px);
+
+				@include sm-down {
+					margin-bottom: inEm(24px, 15px);
+				}
 			}
 		}
 	}

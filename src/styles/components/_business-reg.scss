@@ -5,8 +5,22 @@
 	margin: inEm(140px) auto 0;
 	text-align: center;
 
+	@include md-down {
+		margin-top: inEm(120px);
+	}
+
+	@include sm-down {
+		max-width: none;
+		text-align: left;
+		margin-top: inEm(80px);
+	}
+
 	&__description-container,
 	&__button-container {
 		margin-top: inEm(24px);
+
+		@include sm-down {
+			margin-top: inEm(20px);
+		}
 	}
 }

@@ -3,10 +3,19 @@
 	z-index: 1;
 	margin-top: inEm(120px);
 
+	@include sm-down {
+		margin-top: inEm(48px);
+	}
+
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: inEm(20px);
+
+		@include md-down {
+			grid-template-columns: 1fr;
+			row-gap: inEm(16px);
+		}
 	}
 }
 
@@ -18,28 +27,55 @@
 	padding: inEm(32px);
 	border-radius: inEm(40px);
 
-	&:nth-child(1) {
-		grid-row: 1 / 3;
+	@include md-down {
+		column-gap: inEm(40px);
+		padding: inEm(40px);
+	}
+
+	@include sm-down {
 		flex-direction: column;
-		justify-content: flex-end;
+		padding: inEm(24px);
+		border-radius: inEm(20px);
+		row-gap: inEm(24px);
+	}
 
-		#{$root} {
+	&:nth-child(1) {
 
-			&__text-container {
-				order: 1;
-				max-width: inEm(450px);
-				margin-top: inEm(32px);
-			}
+		@include md-up {
+			grid-row: 1 / 3;
+			flex-direction: column;
+			justify-content: flex-end;
 
-			&__image-container {
-				width: inEm(300px);
-				height: inEm(220px);
+			#{$root} {
+
+				&__text-container {
+					order: 1;
+					max-width: inEm(450px);
+					margin-top: inEm(32px);
+				}
+
+				&__image-container {
+					width: inEm(300px);
+					height: inEm(220px);
+				}
 			}
 		}
 	}
 
 	&__text-container {
 		max-width: inEm(320px);
+
+		@include md-down {
+			max-width: none;
+			order: 1;
+		}
+	}
+
+	&__title-container {
+
+		@include md-down {
+			max-width: inEm(458px);
+		}
 	}
 
 	&__title {
@@ -47,6 +83,10 @@
 		line-height: inEm(26px, 24px);
 		letter-spacing: inEm(-0.42px, 24px);
 		font-weight: 700;
+
+		@include sm-down {
+			font-size: inEm(18px);
+		}
 	}
 
 	&__description-container {
@@ -57,5 +97,15 @@
 		flex-shrink: 0;
 		width: inEm(212px);
 		height: inEm(156px);
+
+		@include md-down {
+			width: inEm(142px);
+			height: inEm(104px);
+		}
+
+		@include sm-down {
+			width: inEm(87px);
+			height: inEm(64px);
+		}
 	}
 }

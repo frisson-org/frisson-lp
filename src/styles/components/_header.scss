@@ -2,6 +2,31 @@
 	color: $accent;
 	padding-top: inEm(32px);
 
+	@include md-down {
+		padding-top: inEm(16px);
+	}
+
+	@include sm-down {
+		padding-top: inEm(24px);
+
+		&_menu & {
+
+			&__logo-container {
+
+				svg {
+
+					path {
+						fill: $white;
+					}
+				}
+			}
+
+			&__nav-container {
+				display: flex;
+			}
+		}
+	}
+
 	&__logo-container {
 		display: block;
 		width: inEm(118px);
@@ -13,10 +38,45 @@
 		&_left {
 			column-gap: inEm(40px);
 		}
+
+		&_right {
+
+			a {
+
+				@include sm-down {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__nav-container {
+
+		@include sm-down {
+			position: fixed;
+			z-index: 6;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: $blue;
+			padding: inEm(190px) inEm(32px) inEm(40px);
+			color: $white;
+			flex-direction: column;
+			display: none;
+			overflow-x: hidden;
+		}
 	}
 
 	&__nav {
 		column-gap: inEm(40px);
+
+		@include sm-down {
+			text-align: center;
+			flex-direction: column;
+			align-items: center;
+			row-gap: inEm(41px);
+		}
 	}
 
 	&__nav-link {
@@ -26,8 +86,19 @@
 		padding-block: inEm(3px, 16px);
 		font-weight: 500;
 
+		@include sm-down {
+			font-size: inEm(24px);
+			line-height: inEm(28px, 24px);
+			padding-block: inEm(5px, 24px);
+			font-weight: 800;
+		}
+
 		&_active {
 			pointer-events: none;
+
+			@include sm-down {
+				text-decoration: underline;
+			}
 
 			&::after {
 				content: '';
@@ -37,7 +108,63 @@
 				bottom: 0;
 				height: 1px;
 				background-color: $accent;
+
+				@include sm-down {
+					content: none;
+				}
 			}
+		}
+
+		&_mobile {
+
+			@include sm-up {
+				display: none;
+			}
+		}
+	}
+
+	&__mobile-header {
+
+		.f-header__logo-container {
+			position: absolute;
+			top: inEm(24px);
+			left: inEm(16px);
+		}
+	}
+
+	&__mobile-open {
+		width: inEm(24px);
+		height: inEm(24px);
+	}
+
+	&__mobile-close {
+		width: inEm(24px);
+		height: inEm(24px);
+		top: inEm(24px);
+		right: inEm(16px);
+	}
+
+	&__nav-container-mobile {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		text-align: center;
+		row-gap: inEm(40px);
+		min-height: inEm(250px);
+
+		.f-qr__items {
+			justify-content: center;
+		}
+	}
+
+	&__mobile-open,
+	&__mobile-header,
+	&__nav-container-mobile {
+
+		@include sm-up {
+			display: none;
 		}
 	}
 }

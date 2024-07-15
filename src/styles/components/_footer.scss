@@ -3,8 +3,35 @@
 	color: $white;
 	padding-block: inEm(30px);
 
+	@include sm-down {
+		padding: inEm(40px) inEm(32px);
+	}
+
+	&__container {
+
+		@include sm-down {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__side {
+
+		&_left {
+
+			@include sm-down {
+				margin-bottom: inEm(32px);
+			}
+		}
+	}
+
 	&__nav {
 		column-gap: inEm(40px);
+
+		@include sm-down {
+			flex-direction: column;
+			row-gap: inEm(16px);
+		}
 	}
 
 	&__nav-link {

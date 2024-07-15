@@ -3,10 +3,26 @@
 	z-index: 1;
 	margin-top: inEm(60px);
 
+	@include md-down {
+		margin-top: inEm(120px);
+	}
+
+	@include sm-down {
+		margin-top: inEm(40px);
+	}
+
 	&_business {
 		position: relative;
 		margin: inEm(120px) #{-$base-outer-padding-desktop} 0;
 		width: auto;
+
+		@include md-down {
+			margin-top: inEm(70px);
+		}
+
+		@include sm-down {
+			margin: inEm(60px) inEm(-15px) 0;
+		}
 
 		&::before,
 		&::after {
@@ -22,6 +38,20 @@
 			width: inEm(639px);
 			height: inEm(877px);
 			background-image: url($img-path + '/dec-image-left.svg');
+
+			@include md-down {
+				top: inEm(-452px);
+				left: inEm(-121px);
+				width: inEm(592px);
+				height: inEm(827px);
+			}
+
+			@include sm-down {
+				top: inEm(-377px);
+				left: inEm(-128px);
+				width: inEm(330px);
+				height: inEm(435px);
+			}
 		}
 
 		&::after {
@@ -30,14 +60,28 @@
 			width: inEm(320px);
 			height: inEm(948px);
 			background-image: url($img-path + '/dec-image-right.svg');
+
+			@include md-down {
+				top: inEm(-111px);
+				right: inEm(-469px);
+				width: inEm(677px);
+				height: inEm(877px);
+			}
+
+			@include sm-down {
+				top: inEm(-231px);
+				right: inEm(-590px);
+			}
 		}
 	}
 
 	&__image-container {
+		position: relative;
 		width: inEm(654px);
-	}
 
-	&__social-block {
-		margin-top: inEm(20px);
+		@include sm-down {
+			width: auto;
+			margin-inline: inEm(-20px);
+		}
 	}
 }

@@ -5,6 +5,21 @@
 	padding: inEm(111px);
 	min-height: inEm(700px);
 
+	@include md-down {
+		margin-top: inEm(50px);
+		min-height: inEm(436px);
+		padding: inEm(48px);
+	}
+
+	@include sm-down {
+		margin-top: inEm(40px);
+		border-radius: inEm(20px);
+		padding: inEm(24px) inEm(24px) inEm(353px);
+		min-height: auto;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
 	&__text-container {
 		position: relative;
 		z-index: 1;
@@ -15,6 +30,10 @@
 	&__description-container,
 	&__button-container {
 		margin-top: inEm(24px);
+
+		@include sm-down {
+			margin-top: inEm(16px);
+		}
 	}
 
 	&__description-container {
@@ -23,6 +42,10 @@
 
 			&:not(:last-child) {
 				margin-bottom: inEm(24px, 16px);
+
+				@include sm-down {
+					margin-bottom: inEm(16px, 15px);
+				}
 			}
 		}
 	}
@@ -32,5 +55,22 @@
 		height: inEm(876px);
 		top: inEm(-88px);
 		right: inEm(-204px);
+
+		@include md-down {
+			top: inEm(-141px);
+			right: inEm(-196px);
+			width: inEm(671px);
+			height: inEm(755px);
+		}
+
+		@include sm-down {
+			top: auto;
+			right: -100%;
+			left: -110%;
+			bottom: inEm(-103px);
+			margin-inline: auto;
+			width: inEm(732px);
+			height: inEm(560px);
+		}
 	}
 }

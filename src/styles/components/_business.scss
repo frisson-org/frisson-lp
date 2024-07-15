@@ -2,6 +2,10 @@
 	position: relative;
 	padding-bottom: inEm(72px);
 
+	@include md-down {
+		padding-bottom: inEm(80px);
+	}
+
 	&::before,
 	&::after {
 		content: '';
@@ -17,16 +21,26 @@
 		width: inEm(379px);
 		height: inEm(846px);
 		background-image: url($img-path + '/dec-business-left.svg');
+
+		@include md-down {
+			left: inEm(-33px);
+			top: inEm(30px);
+		}
 	}
 
 	&::after {
 		right: 0;
 		width: inEm(745px);
 		background-image: url($img-path + '/dec-business-right.svg');
+
+		@include md-down {
+			right: inEm(-33px);
+			top: inEm(32px);
+		}
 	}
 
 	&__wrapper {
 		position: relative;
-		z-index: 1;
+		z-index: 2;
 	}
 }

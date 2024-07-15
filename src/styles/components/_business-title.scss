@@ -3,12 +3,29 @@
 	max-width: inEm(580px);
 	margin: inEm(100px) auto 0;
 
+	@include md-down {
+		margin-top: inEm(96px);
+	}
+
+	@include sm-down {
+		text-align: left;
+		margin-top: inEm(24px);
+	}
+
 	&__description-container {
 		margin-top: inEm(24px);
+
+		@include sm-down {
+			margin-top: inEm(20px);
+		}
 	}
 
 	&__buttons-container {
 		margin-top: inEm(24px);
-		column-gap: inEm(16px);
+		gap: inEm(16px);
+
+		@include sm-down {
+			margin-top: inEm(20px);
+		}
 	}
 }

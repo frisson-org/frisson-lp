@@ -26,9 +26,19 @@
 	line-height: inEm(44px, 40px);
 	letter-spacing: inEm(-0.42px, 40px);
 	font-weight: 700;
+
+	@include sm-down {
+		font-size: inEm(24px);
+		line-height: 1.25em;
+	}
 }
 
 .f-paragraph {
 	font-size: inEm(16px);
 	line-height: inEm(24px, 16px);
+
+	@include sm-down {
+		font-size: inEm(15px);
+		line-height: inEm(22px, 15px);
+	}
 }

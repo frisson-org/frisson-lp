@@ -46,6 +46,17 @@ body {
 				background-color: $white;
 			}
 		}
+
+		.f-header__mobile-open {
+
+			svg {
+
+				rect {
+
+					fill: $white;
+				}
+			}
+		}
 	}
 }
 
@@ -58,6 +69,10 @@ main {
 .f-outer {
 	width: 100%;
 	padding-inline: $base-outer-padding-desktop;
+
+	@include md-down {
+		padding-inline: inEm(32px);
+	}
 
 	@include sm-down {
 		padding-inline: $base-outer-padding-mobile;

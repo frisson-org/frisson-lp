@@ -9,6 +9,11 @@
 	background: $white;
 	transition: background $transition-duration;
 
+	@include sm-down {
+		width: 100%;
+		justify-content: center;
+	}
+
 	@include mouseover {
 		background: $button-hover;
 	}

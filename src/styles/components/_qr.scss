@@ -11,7 +11,7 @@
 		column-gap: inEm(40px);
 
 		@include sm-down {
-			column-gap: inEm(16px);
+			gap: inEm(8px);
 		}
 	}
 
@@ -24,7 +24,7 @@
 		aspect-ratio: 1/1;
 		margin-bottom: inEm(10px);
 
-		@include md-down {
+		@include sm-down {
 			display: none;
 		}
 	}
