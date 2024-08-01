@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: .
+      args:
+        PORT: ${PORT}
+    environment:
+      - PORT=${PORT}
+    env_file:
+      - .env
+    ports:
+      - ${PORT}:${PORT}
