@@ -10,17 +10,17 @@ const Social = ( { classes } ) => {
 		{
 			id: 's1',
 			svg: <InstagramSvg/>,
-			link: '#'
+			link: 'https://www.instagram.com/frisson.journal'
 		},
 		{
 			id: 's2',
 			svg: <VkSvg/>,
-			link: '#'
+			link: 'https://vk.com/frisson.journal'
 		},
 		{
 			id: 's3',
 			svg: <YoutubeSvg/>,
-			link: '#'
+			link: 'https://youtube.com/@frisson.journal?si=Z8zYrkdgFa2gLSL9'
 		}
 	];
 
