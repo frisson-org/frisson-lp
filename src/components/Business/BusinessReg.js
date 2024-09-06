@@ -15,7 +15,7 @@ const BusinessReg = () => {
 				</p>
 			</div>
 			<div className="f-business-reg__button-container flex jcc">
-				<Button title="Регистрация" link="/manager/register" isReg/>
+				<Button title="Регистрация" link="/panel/manager/register" isReg/>
 			</div>
 		</div>
 	);
