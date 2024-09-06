@@ -7,7 +7,7 @@ const Button = ( { link, title, dark, svg, isReg } ) => {
 	const { setShowBlock } = useShowBlock();
 
 	const clickHandler = ( e ) => {
-		window.location.href = '/manager/login'
+		window.location.href = link
 
 		if ( ! isHover && isReg ) {
 			e.preventDefault();
