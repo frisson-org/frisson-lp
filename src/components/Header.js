@@ -99,7 +99,7 @@ const Header = () => {
 			</div>
 			<div className="f-header__side f-header__side_right">
 				<NavLink
-					to="#login"
+					to="/manager/login"
 					onClick={ loginClickHandler }
 					className="f-header__nav-link f-nav-link"
 				>
