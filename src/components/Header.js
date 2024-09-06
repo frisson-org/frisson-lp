@@ -14,6 +14,7 @@ const Header = () => {
 	const [ menuOpen, setMenuOpen ] = useState( false );
 
 	const loginClickHandler = ( e ) => {
+		window.location.pathname = '/manager/login'
 		if ( ! isHover ) {
 			e.preventDefault();
 			setShowBlock( true );
@@ -99,7 +100,6 @@ const Header = () => {
 			</div>
 			<div className="f-header__side f-header__side_right">
 				<NavLink
-					to="/manager/login"
 					onClick={ loginClickHandler }
 					className="f-header__nav-link f-nav-link"
 				>

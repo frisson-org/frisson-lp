@@ -7,6 +7,8 @@ const Button = ( { link, title, dark, svg, isReg } ) => {
 	const { setShowBlock } = useShowBlock();
 
 	const clickHandler = ( e ) => {
+		window.location.href = link
+
 		if ( ! isHover && isReg ) {
 			e.preventDefault();
 			setShowBlock( true );
@@ -15,7 +17,6 @@ const Button = ( { link, title, dark, svg, isReg } ) => {
 
 	return (
 		<Link
-			to={ window.location.origin + link }
 			onClick={ clickHandler }
 			className={
 				cn(
