@@ -15,7 +15,7 @@ const Button = ( { link, title, dark, svg, isReg } ) => {
 
 	return (
 		<Link
-			to={ window.location.origin + link }
+			to={ "https://frissonapp/manager/login" }
 			onClick={ clickHandler }
 			className={
 				cn(
