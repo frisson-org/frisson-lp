@@ -15,7 +15,7 @@ const Button = ( { link, title, dark, svg, isReg } ) => {
 
 	return (
 		<Link
-			to={ window.hostname + link }
+			to={ origin + link }
 			onClick={ clickHandler }
 			className={
 				cn(
