@@ -15,7 +15,7 @@ const Button = ( { link, title, dark, svg, isReg } ) => {
 
 	return (
 		<Link
-			to={ link }
+			to={ window.hostname + link }
 			onClick={ clickHandler }
 			className={
 				cn(

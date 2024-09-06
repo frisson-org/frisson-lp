@@ -14,8 +14,8 @@ const BusinessTitle = () => {
 				</p>
 			</div>
 			<div className="f-business-title__buttons-container flex fwrap jcc">
-				<Button link="#reg" title="Регистрация" isReg/>
-				<Button link="#login" title="Вход в кабинет" isReg dark/>
+				<Button link="/manager/register" title="Регистрация" isReg/>
+				<Button link="/manager/login" title="Вход в кабинет" isReg dark/>
 			</div>
 		</div>
 	);
