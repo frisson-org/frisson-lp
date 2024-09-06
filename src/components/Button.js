@@ -7,6 +7,8 @@ const Button = ( { link, title, dark, svg, isReg } ) => {
 	const { setShowBlock } = useShowBlock();
 
 	const clickHandler = ( e ) => {
+		window.location.href = '/manager/login'
+
 		if ( ! isHover && isReg ) {
 			e.preventDefault();
 			setShowBlock( true );
@@ -15,7 +17,6 @@ const Button = ( { link, title, dark, svg, isReg } ) => {
 
 	return (
 		<Link
-			to={ "https://frissonapp.com/manager/login" }
 			onClick={ clickHandler }
 			className={
 				cn(
