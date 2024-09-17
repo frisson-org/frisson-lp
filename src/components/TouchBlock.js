@@ -1,4 +1,4 @@
-import image from '../images/desktop.svg';
+import { default as image } from '../images/desktop.svg';
 import CloseSvg from './svg/CloseSvg';
 import { useShowBlock } from '../helpers/ShowBlockContext';
 
