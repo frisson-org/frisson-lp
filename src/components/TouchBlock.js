@@ -1,4 +1,4 @@
-import { default as image } from '../images/desktop.svg';
+import { MobileNotPermitted } from './svg/MobileNotPermittedSvg'
 import CloseSvg from './svg/CloseSvg';
 import { useShowBlock } from '../helpers/ShowBlockContext';
 
@@ -17,7 +17,7 @@ const TouchBlock = () => {
 					<CloseSvg/>
 				</button>
 				<div className="f-touch-block__image-container img-contain">
-					<img src={ image } alt="" className="f-touch-block__image"/>
+					<MobileNotPermitted/>
 				</div>
 				<div className="f-touch-block__text-container">
 					<div className="f-touch-block__title-container">
