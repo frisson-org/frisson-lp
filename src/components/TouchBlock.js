@@ -1,4 +1,4 @@
-import { MobileNotPermitted } from './svg/MobileNotPermittedSvg'
+import MobileNotPermitted from './svg/MobileNotPermittedSvg'
 import CloseSvg from './svg/CloseSvg';
 import { useShowBlock } from '../helpers/ShowBlockContext';
 
