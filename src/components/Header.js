@@ -14,6 +14,7 @@ const Header = () => {
 	const [ menuOpen, setMenuOpen ] = useState( false );
 
 	const loginClickHandler = ( e ) => {
+		window.location.href = 'https://frissonapp.com/manager/login'
 		if ( ! isHover ) {
 			e.preventDefault();
 			setShowBlock( true );
